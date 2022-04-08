@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>k0pa portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" integrity="sha384-tKLJeE1ALTUwtXlaGjJYM3sejfssWdAaWR2s97axw4xkiAdMzQjtOjgcyw0Y50KU" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/css/master.css">
+
+  <link rel="stylesheet" href="/css/gmusic.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+		    <div class="container">
+		    	<a class="navbar-brand text-lowercase" href="https://k0pa.rf.gd">k0pa</a>
+		    	<div class="social-media order-lg-last">
+		    		<p class="mb-0 d-flex">
+		    			<a href="https://dsc.bio/k0pa" class="d-flex align-items-center justify-content-center"><span class="bi bi-discord"><i class="sr-only">Discord</i></span></a>
+		    			<a href="https://twitter.com/_k0pa_" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+		    			<a href="https://www.instagram.com/_k0pa_/" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+		    			<a href="https://t.me/k0paitsme" class="d-flex align-items-center justify-content-center"><span class="bi bi-telegram"><i class="sr-only">Telegram</i></span></a>
+		    		</p>
+	        </div>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="fa fa-bars"></span> Menu
+		      </button>
+		      <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav ml-auto mr-md-3">
+		        	<li class="nav-item active"><a href="https://k0pa.rf.gd" class="nav-link">About Me</a></li>
+		        	<li class="nav-item dropdown"><a href="#" class="nav-link">Graphic</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/graphic/music">Music cover arts</a></li>
+                  <li><a class="dropdown-item" href="/graphic/logo">Logo</a></li>
+                  <li><a class="dropdown-item" href="/graphic/banner">Banners</a></li>
+                  <li><a class="dropdown-item" href="/graphic/info">Infographics</a></li>
+                  <li><a class="dropdown-item" href="/graphic/photo">Photo editing</a></li>
+                </ul>
+              </li>
+		        	<li class="nav-item"><a href="/it" class="nav-link">IT</a></li>
+		        	<li class="nav-item"><a href="/music" class="nav-link">Music</a></li>
+		          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </nav>
+    <!-- END nav -->
+
+    <br><br><br>
+
+    <section id="portfolio" class="photo">
+      <div class="project">
+        <img class="project__image" src="/images/graphic/resize/music/1.png" />
+        <div class="grid__overlay op">
+          <button class="viewbutton">view more</button>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project__image" src="/images/graphic/resize/music/2.png" />
+        <div class="grid__overlay op">
+          <button class="viewbutton">view more</button>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project__image" src="/images/graphic/resize/music/3.png" />
+        <div class="grid__overlay op">
+          <button class="viewbutton">view more</button>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project__image" src="/images/graphic/resize/music/4.png" />
+        <div class="grid__overlay op">
+          <button class="viewbutton">view more</button>
+        </div>
+      </div>
+    
+      </div>
+      <div class="overlay">
+        <div class="overlay__inner">
+          <button class="close">close X</button>
+          <form action="https://k0pa.rf.gd/images/graphic/full/music" method="get">
+            <button class="view">view full image</button>
+          </form>
+          <img>
+        </div>
+      </div>
+    </section>
+
+  </div>
+	</section>
+
+  <div class="load" id="load">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+
+  var load = document.getElementById('load');
+  window.addEventListener ("load", function() {
+  setTimeout(function(){load.style.display = 'none';}, 1500); // 1.5 seconds
+  });
+
+  </script>
+  <script>
+
+  const buttons = document.querySelectorAll('.project');
+  const overlay = document.querySelector('.overlay');
+  const overlayImage = document.querySelector('.overlay__inner img');
+
+  function open(e) {
+    overlay.classList.add('open');
+    const src= e.currentTarget.querySelector('img').src;
+    overlayImage.src = src;
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+  }
+
+  buttons.forEach(button => button.addEventListener('click', open));
+  overlay.addEventListener('click', close);
+
+  </script>
+	</body>
+</html>
