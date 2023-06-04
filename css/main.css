@@ -1,0 +1,29 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+}
+.cinzel {
+    font-family: 'Cinzel Decorative', cursive;
+}
+.choko {
+    font-family: 'Chokokutai', cursive;
+}
+.libre {
+    font-family: 'Libre Barcode 128 Text', cursive;
+}
+.link {
+    color: #fbf9f2;
+}
+.link:hover {
+    color: #1F51FF;
+}
+.background {
+    background-color: #231f20;
+    color: #fbf9f2;
+}
+@media (max-width: 980px) {
+    .desktop {
+        display: none;
+    }
+}
